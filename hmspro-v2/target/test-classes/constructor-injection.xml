@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <bean id="patientbean" class= "com.dotridge.beans.PatientBean">
+  
+   <!-- indextype  -->
+ 
+  <!--     <constructor-arg index="0" value="2"></constructor-arg>
+      <constructor-arg index="1" value="gurunath"></constructor-arg>
+      <constructor-arg index="2" value="singh"></constructor-arg>
+      <constructor-arg index="3" value="singh@gmail.com"></constructor-arg>
+      <constructor-arg index="4" value="878999666484"></constructor-arg>
+      <constructor-arg index="5" value="gurunath"></constructor-arg>
+      <constructor-arg index="6" value="guruji"></constructor-arg>
+      <constructor-arg index="7" value="45"></constructor-arg>
+      <constructor-arg index="8" value="male"></constructor-arg>   -->
+      
+         <!-- names type  -->
+          <constructor-arg name="pid" value="2"></constructor-arg>
+      <constructor-arg name="fname" value="gurunath"></constructor-arg>
+      <constructor-arg name="lname" value="singh"></constructor-arg>
+      <constructor-arg name="email" value="singh@gmail.com"></constructor-arg>
+      <constructor-arg name="mobileNum" value="878999666484"></constructor-arg>
+      <constructor-arg name="userId" value="gurunath"></constructor-arg>
+      <constructor-arg name="password" value="guruji"></constructor-arg>
+      <constructor-arg name="age" value="45"></constructor-arg>
+      <constructor-arg name="gender" value="male"></constructor-arg>
+      <constructor-arg name="deasesList">
+       <set>
+        <value>fever</value>
+        <value>cold</value>
+        <value>cough</value>
+       
+       </set>
+      </constructor-arg>
+      <constructor-arg name="medicines">
+      <map>
+      <entry key="feaver" value="medicine a"></entry>
+            <entry key="cold" value="medicine b"></entry>
+                  <entry key="cough" value="medicine c"></entry>
+            
+      
+      </map>
+      
+      </constructor-arg>
+     <constructor-arg name="gurdianBean" ref  = "gurdian"> </constructor-arg>
+    
+   </bean>  
+   <bean id = "gurdian" class="com.dotridge.beans.GurdianBean">
+   <property name="gid" value="23"></property>
+   </bean>   
+        
+        
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="gurdian" class="com.dotridge.beans.GurdianBean">
+		<property name="gid" value="5"></property>
+		<property name="fname" value="verendar"></property>
+		<property name="lname" value="reddy"></property>
+		<property name="email" value="adlfkjd"></property>
+		<property name="mobileNum" value="9643789"></property>
+	
+	
+	</bean>
+</beans>

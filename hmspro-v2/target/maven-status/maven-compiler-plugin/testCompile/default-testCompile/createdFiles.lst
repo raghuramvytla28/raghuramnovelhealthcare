@@ -1,0 +1,7 @@
+com\dotridge\BedTypeDaoTest.class
+com\dotridge\NureseDaoTest.class
+com\dotridge\SupportStaffTest.class
+com\dotridge\DoctorDaoTest.class
+com\dotridge\LabAssistantDaoTest.class
+com\dotridge\PatientDaoTest.class
+com\dotridge\ApplicationBeanTest.class

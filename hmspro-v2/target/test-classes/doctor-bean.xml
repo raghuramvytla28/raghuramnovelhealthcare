@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+        
+  <bean id ="doctor" class="com.dotridge.beans.DoctorBean" > 
+  <property name="doctorId" value="1"></property>
+  <property name="fname" value="raghu"></property>
+    <property name="lname" value="ram"></property>
+    <property name="email" value="raghuramvytla@gmail.com"></property>
+    <property name="mobileNum" value="9876543"></property>
+    <property name="userId" value="raghuram"></property>
+    <property name="password" value="1234"></property>
+    <property name="registerId" value="4"></property>
+   <!--  <property name="nurseBean" ref="nurse"></property> -->
+    <property name="patientList">
+    <list>
+    <ref bean="patientBean"></ref>
+    <ref bean="patientBean2"></ref>
+    </list>
+    </property>
+    </bean>
+    <bean id="nurse" class="com.dotridge.beans.NurseBean">
+    <property name="nId" value="5"></property>
+        <property name="nName" value="chinmayi"></property>
+    
+    </bean>
+    
+    <!-- patient beans -->
+    	<bean id="patientBean" class="com.dotridge.beans.PatientBean">
+	
+		<property name="pid" value="12"></property>
+		<property name="fname" value="raghu"></property>
+		<property name="lname" value="ram"></property>
+		<property name="email" value="raghuramvytla@gmail.com"></property>
+		<property name="mobileNum" value="9542166111"></property>
+		<property name="userId" value="raghuram"></property>
+		<property name="password" value="raghuram"></property>
+		<property name="age" value="24"></property>
+		<property name="gender" value="male"></property>
+		<!-- <property name="gurdianBean" ref="gurdian"></property> -->
+		<property name="gurdianBean">
+		 <ref local = "gurdian"/>
+		</property>
+		<property name="deasesList">
+			<set>
+				<value>feaver</value>
+				<value>cold</value>
+				<value>cough</value>
+				<value>sugar</value>
+				<value>sugar</value>
+			</set>
+		</property>
+		<property name="medicines">
+		<map>
+		<entry key="fever" value="paracitmal"></entry>
+	  <entry key="cold" value="coldact"></entry>
+	 <entry key="cough" value="vicks"></entry>
+		
+		</map>
+		</property>
+		<property name="reports">
+		<props>
+		<prop key="bp">120.8</prop>
+		<prop key="fever">103</prop>
+		</props>
+		</property>
+	</bean>
+	 <bean id="gurdian" class="com.dotridge.beans.GurdianBean">
+		<property name="gid" value="5"></property>
+		<property name="fname" value="verendar"></property>
+		<property name="lname" value="reddy"></property>
+		<property name="email" value="adlfkjd"></property>
+		<property name="mobileNum" value="9643789"></property>
+	
+	
+	</bean> 
+	
+	<bean id="patientBean2" class="com.dotridge.beans.PatientBean">
+	
+		<property name="pid" value="13"></property>
+		<property name="fname" value="raghu"></property>
+		<property name="lname" value="ram"></property>
+		<property name="email" value="raghuramvytla@gmail.com"></property>
+		<property name="mobileNum" value="9542166111"></property>
+		<property name="userId" value="raghuram"></property>
+		<property name="password" value="raghuram"></property>
+		<property name="age" value="24"></property>
+		<property name="gender" value="male"></property>
+		<property name="gurdianBean" ref="gurdian"></property>
+		<property name="gurdianBean">
+		 <ref local = "gurdian2"/>
+		</property>
+		<property name="deasesList">
+			<set>
+				<value>feaver</value>
+				<value>cold</value>
+				<value>cough</value>
+				<value>sugar</value>
+				<value>sugar</value>
+			</set>
+		</property>
+		<property name="medicines">
+		<map>
+		<entry key="fever" value="paracitmal"></entry>
+	  <entry key="cold" value="coldact"></entry>
+	 <entry key="cough" value="vicks"></entry>
+		
+		</map>
+		</property>
+		<property name="reports">
+		<props>
+		<prop key="bp">120.8</prop>
+		<prop key="fever">103</prop>
+		</props>
+		</property>
+	</bean>
+	 <bean id="gurdian2" class="com.dotridge.beans.GurdianBean">
+		<property name="gid" value="5"></property>
+		<property name="fname" value="verendar"></property>
+		<property name="lname" value="reddy"></property>
+		<property name="email" value="adlfkjd"></property>
+		<property name="mobileNum" value="9643789"></property>
+	
+	
+	</bean>  
+    
+  
+     
+   
+   
+   
+   
+   
+   </beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="patientBean" class="com.dotridge.beans.PatientBean">
+        <property name="pid" value="12"></property>
+        <property name="fname" value="raghu"></property>
+        <property name="lname" value="ram"></property>
+        <property name="email" value="raghuramvytla@gmail.com"></property>
+        <property name="mobileNum" value="9542166111"></property>
+       <property name="userId" value="raghuram"></property>
+       <property name="password" value="raghuram"></property>
+     <!--  //  <property name="age" value="24"></property>
+       //  <property name="gender" value="male"></property> -->
+                <property name="deasesList">
+                <list>
+                <value>feaver</value>
+                 <value>cold</value>
+                  <value>cough</value>
+                   <value>cough</value>
+                    <value>sugar</value>
+                </list>
+                </property>
+        
+        </bean>
+        </beans>
